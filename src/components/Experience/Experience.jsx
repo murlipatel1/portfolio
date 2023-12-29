@@ -90,9 +90,9 @@ const index = () => {
                                     <TimelineDot variant="outlined" color="secondary" />
                                     {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
                                 </TimelineSeparator>
-                                {/* <TimelineContent sx={{ py: '12px', px: 2 }}> */}
+                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <ExperienceCard experience={experience}/>
-                                {/* </TimelineContent> */}
+                                </TimelineContent> 
                             </TimelineItem>
                         ))}
                     </Timeline>
