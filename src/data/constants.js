@@ -262,8 +262,8 @@ export const education = [
   {
     id: 1,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvEpvO0Oms2TUhz25pJELyy9If18ITrQ8r1g&usqp=CAU",
-    school: "Edunova Science Higher Secondary School , Gujarat",
-    date: "Apr 2019 - Apr 2025",
+    school: "Edunova Science Higher Secondary School, Gujarat",
+    date: "Apr 2019 - Apr 2021",
     grade: "91.2%",
     desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
     degree: "GBSC(XII), Science with Computer",
@@ -274,7 +274,7 @@ export const education = [
     school: "Seventh Day Adventist School, Gujarat",
     date: "Apr 2017 - Apr 2019",
     grade: "92.3%",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
+    desc: "I completed my class 10 education at Seventh Day Adventist School, Gujarat, where I studied Science.",
     degree: "ICSC(X), Science with Computer",
   },
 ];
