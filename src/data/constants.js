@@ -9,7 +9,7 @@ export const Bio = {
     "Passionate about collaboration, I thrive in environments that foster teamwork and innovation. As a dedicated full-stack developer, I bring a holistic approach to crafting seamless and responsive web solutions. My enthusiasm extends beyond traditional development, as I am also deeply engaged in machine learning, constantly exploring new frontiers in AI. With a keen interest in cloud technologies, I leverage the power of scalable and efficient cloud platforms to deliver cutting-edge solutions.",
   github: "https://github.com/murlipatel1",
   resume:
-    "https://drive.google.com/file/d/17xuHvHU5C9ckxTsbNvnQg89I8q1C78O7/view?usp=sharing",
+    "https://drive.google.com/file/d/1QUHdxp3rsRHZ_t5TZQoJYROgO9TeFBZ_/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/murli-patel-193605224/",
   twitter: "https://twitter.com/patelmurli15",
   insta: "https://www.instagram.com/rishav_chanda/",
