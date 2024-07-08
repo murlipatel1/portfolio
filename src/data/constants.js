@@ -197,6 +197,19 @@ export const skills = [
 ];
 
 export const experiences = [
+  {id: 2,
+    img: "",
+    role: "AI ML Internship",
+    company: "Infoware House Pvt. Ltd",
+    date: "May 2024 - July 2024",
+    desc: "A project based on finance, aimed at predicting various financial assets and providing user feedback accordingly.",
+    skills: [
+      "Tensorflow",
+      "Flask",
+      "Python",
+      "SQLite",
+      "RESTful APIs",
+    ]},
   {
     id: 1,
     img: "",
@@ -238,7 +251,7 @@ export const experiences = [
     role: "SSIP Finalist",
     company: "Gov. of Gujarat",
     date: "Nov2022 - Feb 2023",
-    desc: "The problem statement was to build an application onDEAD STOCK MANAGEMENT. We proposed a web-application for the same.Right from inputting entry, dispatching the stock, till billing and updating the status of stock; all features are provided in our application. Owners need not to worry about anything.  We also integrated WhatsApp-Chat Bot feature which is featured to deliver time to time notification that minimizes the dead stock wastage. ",
+    desc: "The problem statement was to build an application on DEAD STOCK MANAGEMENT. We proposed a web-application for the same.Right from inputting entry, dispatching the stock, till billing and updating the status of stock; all features are provided in our application. Owners need not to worry about anything.  We also integrated WhatsApp-Chat Bot feature which is featured to deliver time to time notification that minimizes the dead stock wastage. ",
     skills: [
       "Leadership",
       "MERN Stack",
