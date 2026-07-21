@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b1220;
+  --color-ink-soft: #111827;
+  --color-surface: #151d2e;
+  --color-surface-2: #1a2438;
+  --color-border: #243049;
+  --color-muted: #94a3b8;
+  --color-fg: #e8eef7;
+  --color-accent: #2dd4bf;
+  --color-accent-dim: #14b8a6;
+  --color-accent-soft: color-mix(in srgb, #2dd4bf 16%, transparent);
+
+  --font-display: "Source Sans 3", Arial, Helvetica, sans-serif;
+  --font-sans: "Source Sans 3", Arial, Helvetica, sans-serif;
+
+  --shadow-glow: 0 0 80px color-mix(in srgb, #2dd4bf 12%, transparent);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, #2dd4bf 35%, transparent);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .bg-atmosphere {
+    background-color: var(--color-ink);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, color-mix(in srgb, #2dd4bf 18%, transparent), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, color-mix(in srgb, #38bdf8 10%, transparent), transparent),
+      linear-gradient(to bottom, transparent, var(--color-ink));
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(color-mix(in srgb, #94a3b8 8%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, #94a3b8 8%, transparent) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
+  }
+}

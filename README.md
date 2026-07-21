@@ -1,43 +1,27 @@
-# My Portfolio
+# Murli Patel — Portfolio
 
-Welcome to my portfolio website! This repository contains the source code for my personal portfolio showcasing my skills, projects, and more.
+Recruiter-first personal site for **Murli Patel**, Full Stack Developer at Kaushalam Digital.
 
-## Table of Contents
+Built with **Vite**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Motion**.
 
-- [About Me](#about-me)
-- [Technologies Used](#technologies-used)
-- [Projects](#projects)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [License](#license)
+## Develop
 
-## About Me
+```bash
+npm install
+npm run dev
+```
 
-I am Murli Patel, a passionate Full Stack Developer / Cloud and ML enthusiast based in Gujarat. This portfolio serves as a snapshot of my journey, skills, and projects.
+## Build & deploy (GitHub Pages)
 
+```bash
+npm run build
+npm run deploy
+```
 
-## Prerequisites
+Optional EmailJS (otherwise the contact form opens mailto):
 
-Before you begin, ensure you have the following installed on your machine:
-
-- [Node.js](https://nodejs.org/) (LTS version recommended)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
-- [git](https://git-scm.com/) (LTS version recommended)
-
-## Getting Started
-
-To run this project locally, follow these steps:
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/your-username/your-react-project.git
-   ```
-
-## Usage
-
-Feel free to explore my portfolio and get to know me better. You can view my projects, check out my skills, and reach out to me through the provided contact information.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+```env
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
