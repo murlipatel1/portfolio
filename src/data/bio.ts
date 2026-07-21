@@ -10,7 +10,7 @@ export const bio = {
   linkedin: "https://www.linkedin.com/in/murli-patel-193605224/",
   twitter: "https://twitter.com/patelmurli15",
   resume:
-    "https://drive.google.com/file/d/1CtDyLtEsMPtiyE2RzKJx2r1_V4IoAWzy/view?usp=sharing",
+    "https://drive.google.com/file/d/1kx82Wlfr4xepocCFxZ001HvjmfXFQjn4/view?usp=sharing",
   portfolioNote: "Open to impactful full-stack and cloud roles.",
   interests: [
     "Cloud computing & infrastructure",
