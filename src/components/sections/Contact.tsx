@@ -1,6 +1,7 @@
 import { useRef, useState, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
-import { Github, Linkedin, Mail, Phone, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "../ui/BrandIcons";
 import { bio } from "../../data/bio";
 import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
@@ -71,7 +72,7 @@ export function Contact() {
             rel="noreferrer"
             className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
           >
-            <Github size={18} className="text-accent" />
+            <GithubIcon size={18} className="text-accent" />
             GitHub
           </a>
           <a
@@ -80,7 +81,7 @@ export function Contact() {
             rel="noreferrer"
             className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
           >
-            <Linkedin size={18} className="text-accent" />
+            <LinkedinIcon size={18} className="text-accent" />
             LinkedIn
           </a>
         </div>

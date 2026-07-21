@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowDownRight, Github, Linkedin } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "../ui/BrandIcons";
 import { bio } from "../../data/bio";
 import { Button } from "../ui/Button";
 import { fadeUp, stagger } from "../../lib/motion";
@@ -126,7 +127,7 @@ export function Hero() {
               className="ml-1 rounded-lg p-2.5 text-muted hover:bg-surface-2 hover:text-fg"
               aria-label="GitHub"
             >
-              <Github size={20} />
+              <GithubIcon size={20} />
             </a>
             <a
               href={bio.linkedin}
@@ -135,7 +136,7 @@ export function Hero() {
               className="rounded-lg p-2.5 text-muted hover:bg-surface-2 hover:text-fg"
               aria-label="LinkedIn"
             >
-              <Linkedin size={20} />
+              <LinkedinIcon size={20} />
             </a>
           </motion.div>
         </div>

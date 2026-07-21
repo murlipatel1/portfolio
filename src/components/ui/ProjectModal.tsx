@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { ExternalLink, Github, X } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
+import { GithubIcon } from "./BrandIcons";
 import type { Project } from "../../data/projects";
 import { Chip } from "./Chip";
 import { Button } from "./Button";
@@ -81,7 +82,7 @@ export function ProjectModal({ project, onClose }: Props) {
         <div className="mt-6 flex flex-wrap gap-3">
           {project.github && (
             <Button href={project.github} target="_blank" rel="noreferrer" variant="secondary">
-              <Github size={16} /> Code
+              <GithubIcon size={16} /> Code
             </Button>
           )}
           {project.live && (

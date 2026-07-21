@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "../ui/BrandIcons";
+import { Mail } from "lucide-react";
 import { bio } from "../../data/bio";
 
 export function Footer() {
@@ -25,7 +26,7 @@ export function Footer() {
             className="text-muted hover:text-accent"
             aria-label="GitHub"
           >
-            <Github size={18} />
+            <GithubIcon size={18} />
           </a>
           <a
             href={bio.linkedin}
@@ -34,7 +35,7 @@ export function Footer() {
             className="text-muted hover:text-accent"
             aria-label="LinkedIn"
           >
-            <Linkedin size={18} />
+            <LinkedinIcon size={18} />
           </a>
         </div>
       </div>
