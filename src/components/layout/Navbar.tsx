@@ -40,11 +40,36 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5">
         <a
           href="#top"
-          className="font-display text-lg font-bold tracking-tight text-fg"
+          className="inline-flex items-center gap-2 font-display text-lg font-bold tracking-tight text-fg"
           onClick={() => setOpen(false)}
+          aria-label="Home"
         >
-          {bio.name.split(" ")[0]}
-          <span className="text-accent">.</span>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            className="text-accent"
+          >
+            <path
+              d="M12 2L3 7v10l9 5 9-5V7l-9-5Z"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M12 12L3 7m9 5 9-5m-9 5v10"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span>
+            Stack<span className="text-accent">.</span>
+          </span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

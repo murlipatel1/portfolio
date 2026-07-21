@@ -92,7 +92,7 @@ export function Hero() {
             className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/8 px-3 py-1.5 text-sm font-medium text-accent"
           >
             <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
-            {bio.title} · {bio.company}
+            {bio.title}
           </motion.p>
 
           <motion.h1

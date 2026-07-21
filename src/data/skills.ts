@@ -1,6 +1,6 @@
 export type Skill = {
   name: string;
-  icon: string;
+  icon?: string;
   invert?: boolean;
 };
 
@@ -50,10 +50,7 @@ export const skillGroups: SkillGroup[] = [
         icon: icon("flask/flask-original.svg"),
         invert: true,
       },
-      {
-        name: "RESTful APIs",
-        icon: "https://cdn.simpleicons.org/openapi/6BA539",
-      },
+      { name: "RESTful APIs" },
       {
         name: "MCP Services",
         icon: "https://cdn.simpleicons.org/anthropic/D4A27F",

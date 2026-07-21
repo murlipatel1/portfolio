@@ -4,7 +4,7 @@ export const bio = {
   company: "Kaushalam Digital Pvt. Ltd.",
   location: "Ahmedabad, India",
   tagline:
-    "I build fast, reliable full-stack products with React, Next.js, Node.js, and cloud — from inventory systems to analytics dashboards.",
+    "I build fast, reliable full-stack products with React, Next.js, Node.js, and cloud, from inventory systems to analytics dashboards.",
   phone: "+91-9574003662",
   email: "patelmurli15@gmail.com",
   github: "https://github.com/murlipatel1",

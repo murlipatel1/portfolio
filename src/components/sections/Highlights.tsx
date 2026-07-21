@@ -7,7 +7,6 @@ export function Highlights() {
       id="highlights"
       eyebrow="Proof"
       title="Impact at a glance"
-      description="Numbers recruiters can scan in seconds — from production systems to hackathons and research."
       className="border-y border-border/60 bg-ink-soft/40"
     >
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,16 +1,18 @@
 import { useRef, useState, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
+import { motion, useReducedMotion } from "motion/react";
 import { Mail, Phone, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/BrandIcons";
 import { bio } from "../../data/bio";
-import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
+import { fadeUp, stagger } from "../../lib/motion";
 
 export function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">(
     "idle",
   );
+  const reduce = useReducedMotion();
 
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -23,7 +25,9 @@ export function Contact() {
 
     if (!emailjsReady) {
       const data = new FormData(formRef.current);
-      const subject = encodeURIComponent(String(data.get("subject") || "Portfolio inquiry"));
+      const subject = encodeURIComponent(
+        String(data.get("subject") || "Portfolio inquiry"),
+      );
       const body = encodeURIComponent(
         `From: ${data.get("from_name")} <${data.get("from_email")}>\n\n${data.get("message")}`,
       );
@@ -44,49 +48,63 @@ export function Contact() {
   };
 
   return (
-    <Section
-      id="contact"
-      eyebrow="Contact"
-      title="Let's build something"
-      description="Reach out for roles, collaborations, or questions about my work."
-    >
-      <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-        <div className="space-y-4">
-          <a
-            href={`mailto:${bio.email}`}
-            className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
-          >
-            <Mail size={18} className="text-accent" />
-            {bio.email}
-          </a>
-          <a
-            href={`tel:${bio.phone.replace(/\s/g, "")}`}
-            className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
-          >
-            <Phone size={18} className="text-accent" />
-            {bio.phone}
-          </a>
-          <a
-            href={bio.github}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
-          >
-            <GithubIcon size={18} className="text-accent" />
-            GitHub
-          </a>
-          <a
-            href={bio.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
-          >
-            <LinkedinIcon size={18} className="text-accent" />
-            LinkedIn
-          </a>
-        </div>
+    <section id="contact" className="scroll-mt-20 py-14 md:py-16">
+      <motion.div
+        className="mx-auto grid w-full max-w-5xl items-start gap-8 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10"
+        initial={reduce ? false : "hidden"}
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        variants={reduce ? undefined : stagger}
+      >
+        <motion.div variants={reduce ? undefined : fadeUp} className="lg:pt-1">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            Contact
+          </p>
+          <h2 className="font-display text-3xl font-bold tracking-tight text-fg md:text-4xl">
+            Let's build something
+          </h2>
+          <p className="mt-3 max-w-md text-base leading-relaxed text-muted">
+            Reach out for roles, collaborations, or questions about my work.
+          </p>
 
-        <form
+          <div className="mt-6 space-y-3">
+            <a
+              href={`mailto:${bio.email}`}
+              className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
+            >
+              <Mail size={18} className="text-accent" />
+              {bio.email}
+            </a>
+            <a
+              href={`tel:${bio.phone.replace(/\s/g, "")}`}
+              className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
+            >
+              <Phone size={18} className="text-accent" />
+              {bio.phone}
+            </a>
+            <a
+              href={bio.github}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
+            >
+              <GithubIcon size={18} className="text-accent" />
+              GitHub
+            </a>
+            <a
+              href={bio.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
+            >
+              <LinkedinIcon size={18} className="text-accent" />
+              LinkedIn
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.form
+          variants={reduce ? undefined : fadeUp}
           ref={formRef}
           onSubmit={handleSubmit}
           className="flex flex-col gap-3 rounded-2xl border border-border bg-surface p-5 sm:p-6"
@@ -133,24 +151,24 @@ export function Contact() {
             placeholder="Message"
             className="resize-y rounded-lg border border-border bg-ink px-3 py-2.5 text-sm text-fg outline-none placeholder:text-muted focus:border-accent"
           />
-          <Button
-            type="submit"
-            disabled={status === "sending"}
-            className="mt-1"
-          >
+          <Button type="submit" disabled={status === "sending"} className="mt-1">
             <Send size={16} />
-            {status === "sending" ? "Sending…" : emailjsReady ? "Send message" : "Open email"}
+            {status === "sending"
+              ? "Sending…"
+              : emailjsReady
+                ? "Send message"
+                : "Open email"}
           </Button>
           {status === "ok" && (
-            <p className="text-sm text-accent">Message sent — thanks!</p>
+            <p className="text-sm text-accent">Message sent. Thanks!</p>
           )}
           {status === "error" && (
             <p className="text-sm text-red-400">
               Something went wrong. Email me directly at {bio.email}.
             </p>
           )}
-        </form>
-      </div>
-    </Section>
+        </motion.form>
+      </motion.div>
+    </section>
   );
 }

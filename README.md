@@ -1,4 +1,4 @@
-# Murli Patel — Portfolio
+# Murli Patel | Portfolio
 
 Recruiter-first personal site for **Murli Patel**, Full Stack Developer at Kaushalam Digital.
 

@@ -14,13 +14,6 @@ export const education: EducationItem[] = [
     date: "2021 – 2025",
     grade: "CGPA 9.43",
   },
-  {
-    id: "edunova",
-    school: "Edunova Higher Secondary School",
-    degree: "Higher Secondary (Science)",
-    date: "2019 – 2021",
-    grade: "85%",
-  },
 ];
 
 export type Publication = {
@@ -35,11 +28,13 @@ export const publications: Publication[] = [
     id: "task-based",
     title: "An Analysis of Task-Based Algorithms for Cloud Computing",
     venue: "Springer Nature",
+    link: "https://link.springer.com/chapter/10.1007/978-981-99-3758-5_44",
   },
   {
     id: "resource-oriented",
     title: "An Analysis of Resource-Oriented Algorithms for Cloud Computing",
     venue: "Springer Nature",
+    link: "https://link.springer.com/chapter/10.1007/978-981-99-3758-5_46",
   },
 ];
 
@@ -59,8 +54,8 @@ export const achievements: Achievement[] = [
     org: "WowDAO Worldwide Hackathon",
     date: "Oct 2023",
     description:
-      "AI-Enhanced Brain Imaging for Improved Diagnostics — generative imaging to support faster clinical decisions.",
-    link: "https://wowdao.ai/team/byte-hogs-226.html",
+      "AI-Enhanced Brain Imaging for Improved Diagnostics: generative imaging to support faster clinical decisions.",
+    link: "https://www.linkedin.com/posts/finalists-announcement-worldwide-ai-share-7112142639335972864-LVhn/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADhUqr8BtDptDB6gIJQ1U7tiKoVZUcaDPMY",
   },
   {
     id: "ssip",

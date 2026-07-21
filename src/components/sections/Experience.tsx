@@ -8,7 +8,7 @@ export function Experience() {
       id="work"
       eyebrow="Experience"
       title="Where I've shipped"
-      description="Full-stack delivery in production — performance, data pipelines, and product UI."
+      description="Full-stack delivery in production: performance, data pipelines, and product UI."
     >
       <ol className="relative space-y-10 border-l border-border pl-6 md:pl-8">
         {experiences.map((job) => (
