@@ -1,7 +1,7 @@
 import { useRef, useState, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { motion, useReducedMotion } from "motion/react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/BrandIcons";
 import { bio } from "../../data/bio";
 import { Button } from "../ui/Button";
@@ -74,13 +74,6 @@ export function Contact() {
             >
               <Mail size={18} className="text-accent" />
               {bio.email}
-            </a>
-            <a
-              href={`tel:${bio.phone.replace(/\s/g, "")}`}
-              className="flex items-center gap-3 text-sm text-muted transition hover:text-accent"
-            >
-              <Phone size={18} className="text-accent" />
-              {bio.phone}
             </a>
             <a
               href={bio.github}
